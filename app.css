@@ -92,13 +92,10 @@ img {
     z-index: 1; /* Niedriger z-index */
 }
 
-img, button, p, h1 {
+img, button, p, h1, input {
     z-index: 2; /* Höherer z-index */
     position: relative; /* Position muss 'relative', 'absolute' oder 'fixed' sein, damit z-index wirksam ist */
 }
-
-
-
 
 #randomGifContainer {
     text-align: center;
