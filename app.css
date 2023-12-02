@@ -1,0 +1,118 @@
+@keyframes rainbowAnimation {
+    0% { color: red; background-color: red; }
+    15% { color: orange; background-color: orange; }
+    30% { color: yellow; background-color: yellow; }
+    45% { color: green; background-color: green; }
+    60% { color: blue; background-color: blue; }
+    75% { color: indigo; background-color: indigo; }
+    90% { color: violet; background-color: violet; }
+    100% { color: red; background-color: red; }
+}
+
+@keyframes verticalMove {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        text-shadow:
+            0.03em 0 0 rgba(255, 0, 0, 0.75),
+            -0.03em 0 0 rgba(0, 255, 0, 0.75),
+            0 0.03em 0 rgba(0, 0, 255, 0.75),
+            0 -0.03em 0 rgba(0, 255, 255, 0.75);
+    }
+    25%, 75% {
+        text-shadow:
+            0.03em 0 0 rgba(0, 0, 255, 0.75),
+            -0.03em 0 0 rgba(255, 0, 0, 0.75),
+            0 0.03em 0 rgba(0, 255, 255, 0.75),
+            0 -0.03em 0 rgba(0, 255, 0, 0.75);
+    }
+    50% {
+        text-shadow:
+            0.03em 0 0 rgba(0, 255, 0, 0.75),
+            -0.03em 0 0 rgba(0, 255, 255, 0.75),
+            0 0.03em 0 rgba(255, 0, 0, 0.75),
+            0 -0.03em 0 rgba(0, 0, 255, 0.75);
+    }
+}
+
+#mouseTrail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none; /* Damit der Trail nicht mit Mausereignissen interagiert */
+}
+
+
+body {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.trail {
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    animation: rainbowTrail 2s linear infinite;
+    pointer-events: none;
+}
+
+* {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Nicht-präfixierte Version, derzeit unterstützt von Chrome, Opera und Safari */
+}
+
+/* Verhindert das Drag & Drop von Bildern */
+img {
+    pointer-events: none;
+}
+
+.drawPoint {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    z-index: 1; /* Niedriger z-index */
+}
+
+img, button, p, h1, .gcse-search {
+    z-index: 2; /* Höherer z-index */
+    position: relative; /* Position muss 'relative', 'absolute' oder 'fixed' sein, damit z-index wirksam ist */
+}
+
+/* Stile für das Google Custom Search Element */
+.gcse-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Abstand von der Oberseite der Seite */
+}
+
+
+
+#randomGifContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#randomGifContainer img {
+    width: 300px; /* Breite auf 350 Pixel festlegen */
+    height: auto; /* Höhe automatisch anpassen, um das Seitenverhältnis zu bewahren */
+    max-height: 300px; /* Maximale Höhe auf 300 Pixel begrenzen */
+}
