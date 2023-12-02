@@ -33,7 +33,7 @@ document.addEventListener('mouseup', () => isDrawing = false);
 document.addEventListener('mouseleave', () => isDrawing = false);
 
 document.addEventListener('mousemove', (event) => {
-    if (isDrawing) {
+    if (isDrawing && !isMouseOnSearchElements(event)) {
         const drawPoint = document.createElement('div');
         drawPoint.className = 'drawPoint';
         drawingContainer.appendChild(drawPoint);
@@ -95,4 +95,15 @@ function triggerSearch() {
     const query = document.getElementById('searchInput').value;
     const searchUrl = 'https://www.google.com/search?q=' + encodeURIComponent(query);
     window.open(searchUrl, '_blank');
+}
+
+function isMouseOnSearchElements(event) {
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const searchRect = searchInput.getBoundingClientRect();
+    const buttonRect = searchButton.getBoundingClientRect();
+    return event.clientX >= searchRect.left && event.clientX <= searchRect.right &&
+           event.clientY >= searchRect.top && event.clientY <= searchRect.bottom ||
+           event.clientX >= buttonRect.left && event.clientX <= buttonRect.right &&
+           event.clientY >= buttonRect.top && event.clientY <= buttonRect.bottom;
 }
