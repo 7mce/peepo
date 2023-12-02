@@ -107,3 +107,34 @@ function isMouseOnSearchElements(event) {
            event.clientX >= buttonRect.left && event.clientX <= buttonRect.right &&
            event.clientY >= buttonRect.top && event.clientY <= buttonRect.bottom;
 }
+
+const searchButton = document.getElementById('searchButton');
+let isMouseNear = false;
+let lastX = 0, lastY = 0;
+let timeoutId;
+
+document.addEventListener('mousemove', (event) => {
+    const buttonRect = searchButton.getBoundingClientRect();
+    const distance = Math.hypot(event.clientX - buttonRect.left, event.clientY - buttonRect.top);
+    isMouseNear = distance < 80;
+
+    if (isMouseNear) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            searchButton.style.transform = 'translate(0, 0)';
+            lastX = 0;
+            lastY = 0;
+        }, 500); // 3 Sekunden, bevor der Button zurückkehrt
+    }
+});
+
+function randomButtonMovement() {
+    if (isMouseNear) {
+        const randomX = (Math.random() - 0.3) * 200;
+        const randomY = (Math.random() - 0.3) * 200;
+        lastX = Math.max(Math.min(lastX + randomX, window.innerWidth - searchButton.offsetWidth), 0);
+        lastY = Math.max(Math.min(lastY + randomY, window.innerHeight - searchButton.offsetHeight), 0);
+        searchButton.style.transform = `translate(${lastX}px, ${lastY}px)`;
+    }
+}
+setInterval(randomButtonMovement, 50);
