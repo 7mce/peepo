@@ -76,3 +76,23 @@ document.addEventListener('DOMContentLoaded', () => {
     gifContainer.innerHTML = `<img src="${randomGif}" alt="Random Gif">`;
 });
 
+
+
+// Event listener for the search input to trigger search on pressing 'Enter'
+document.getElementById('searchInput').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        triggerSearch();
+    }
+});
+
+// Event listener for the search button to trigger search on click
+document.getElementById('searchButton').addEventListener('click', function() {
+    triggerSearch();
+});
+
+// Function to trigger the search
+function triggerSearch() {
+    const query = document.getElementById('searchInput').value;
+    const searchUrl = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+    window.open(searchUrl, '_blank');
+}
