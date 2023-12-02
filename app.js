@@ -124,7 +124,7 @@ document.addEventListener('mousemove', (event) => {
             searchButton.style.transform = 'translate(0, 0)';
             lastX = 0;
             lastY = 0;
-        }, 500); // 3 Sekunden, bevor der Button zurückkehrt
+        }, 500); // 500 ms, bevor der Button zurückkehrt
     }
 });
 
