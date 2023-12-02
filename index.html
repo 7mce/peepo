@@ -9,6 +9,36 @@
     <!-- Search Field -->
     <div id="searchContainer">
         <input type="text" id="searchInput" placeholder="let peepo search...">
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const placeholders = [
+                    "Why is Shroud Hacking...",
+                    "Why is Moondye7 so hot...",
+                    "Why ynxzi so calm",
+                    "Why is xQc's Hair calling me...",
+                    "Why is Pokimane bannig me...",
+                    "Is TimTheTatman a Dr...",
+                    "Wher is Asmongold's bread...",
+                    "Valkyrae's detective skills...",
+                    "Why is DrLupo so loud...",
+                    "Why is Summit1g so dark...",
+                    "How to buy Tfue's spaghettis...",
+                    "Wher is Ludwig's generator...",
+                    "Why is Moondye7 so big...",
+                    "Hasanabi's weather conspiracy...",
+                    "Is Corpse black hole real...",
+                    "Why is Sykkuno innocent...",
+                    "TheGrefg sold for billions...",
+                    "CohhCarnage's portal device...",
+                    "CourageJD CIA Agent...",
+                    "Mizkif's trolling KFC...",
+                    "Moondye7´s IQ..."
+                ];
+        
+                const randomPlaceholder = placeholders[Math.floor(Math.random() * placeholders.length)];
+                document.getElementById('searchInput').setAttribute('placeholder', randomPlaceholder);
+            });
+        </script> 
         <button id="searchButton">Search</button>
     </div>
 
