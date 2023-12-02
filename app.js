@@ -1,7 +1,7 @@
 
 // Funktionen für den Maus-Trail und das Zeichnen
 let trailElements = [];
-const maxTrail = 50; // Maximale Anzahl an Trail-Elementen
+const maxTrail = 30; // Maximale Anzahl an Trail-Elementen
 let trailIndex = 0;
 let hue = 0; // Farbton für den Trail
 let isDrawing = false;
