@@ -49,26 +49,13 @@ document.head.appendChild(document.createElement('style')).textContent = '.drawP
 
 document.addEventListener('DOMContentLoaded', () => {
     const gifs = [
-        "https://media.tenor.com/YijNqMHT6KsAAAAi/smadging-smadge.gif",
-        "https://media.tenor.com/YijNqMHT6KsAAAAi/smadging-smadge.gif",
-        "https://media.tenor.com/NT_qloZ4io8AAAAi/thinkge-thinking-pepe.gif",
-        "https://media.tenor.com/SeUqQ_noBbAAAAAi/peepo-juice.gif",
-        "https://media.tenor.com/QsuY7AMzaWAAAAAi/peepo-dj.gif",
-        "https://media.tenor.com/CSiyQp9eLbsAAAAi/pepe-wine.gif",
-        "https://media.tenor.com/Wy6p1fCuqIoAAAAi/peepo-clown-clown.gi",
-        "https://media.tenor.com/flGNpobJuuoAAAAi/happy-clap.gif",
-        "https://media.tenor.com/_kGSWq3wq4IAAAAi/sad-pepe.gif",
+        "https://i.gifer.com/3ZsR.gif",
         "https://media.tenor.com/a4W7UfoAg3oAAAAi/pepe-the-frog9648r-dance.gif",
-        "https://media.tenor.com/6w1aupPULL4AAAAi/pepe.gif",
-        "https://media.tenor.com/SQ587Dz0REsAAAAi/free-the-homie.gif",
-        "https://media.tenor.com/Lf2JYGN_5L8AAAAj/pepe.gif",
-        "https://media.tenor.com/MG-aoPKcaLYAAAAj/dj-party.gif",
-        "https://media.tenor.com/40DD5ETWkJgAAAAj/nerdge-nerd.gif",
-        "https://media.tenor.com/fbWjCUUdJO4AAAAj/dank-danklove.gif",
-        "https://media.tenor.com/OSWzzKQ_ox4AAAAj/salami-pepo.gif",
-        "https://media.tenor.com/J1QjkX0SYG8AAAAj/blankies-peepo.gif",
-        "https://media.tenor.com/BWzK7cmNVWgAAAAj/pepo-g-peepo.gif",
-        "https://media.tenor.com/BWzK7cmNVWgAAAAj/pepo-g-peepo.gif"
+        "https://media.tenor.com/2bYnXdcbK3sAAAAi/monka-lol.gif",
+        "https://media.tenor.com/jR291aTjU6QAAAAi/pepe-deez-nuts-pepe-frog.gif",
+        "https://media.tenor.com/Q-ivIya86GoAAAAd/pepefrog.gif",
+        "https://media.tenor.com/g6nK3QsP8wkAAAAC/kdaeza-peepo.gif",
+        "https://media.tenor.com/9-52JAMIBQ4AAAAC/pepe-peppo.gif"
     ];
 
     const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
