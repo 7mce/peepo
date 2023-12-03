@@ -53,9 +53,24 @@ document.addEventListener('DOMContentLoaded', () => {
         "https://media.tenor.com/a4W7UfoAg3oAAAAi/pepe-the-frog9648r-dance.gif",
         "https://media.tenor.com/2bYnXdcbK3sAAAAi/monka-lol.gif",
         "https://media.tenor.com/jR291aTjU6QAAAAi/pepe-deez-nuts-pepe-frog.gif",
-        "https://media.tenor.com/Q-ivIya86GoAAAAd/pepefrog.gif",
+        "https://media.tenor.com/eX-EGbJ0zJMAAAAi/pepe-pepe-the-frog.gif",
         "https://media.tenor.com/g6nK3QsP8wkAAAAC/kdaeza-peepo.gif",
-        "https://media.tenor.com/9-52JAMIBQ4AAAAC/pepe-peppo.gif"
+        "https://media.tenor.com/9-52JAMIBQ4AAAAC/pepe-peppo.gif",
+        "https://media.tenor.com/AHa9SuqhxdAAAAAC/slayge-pepe.gif",
+        "https://media.tenor.com/66BDvxP5_OwAAAAi/pepe.gif",
+        "https://media.tenor.com/N-WYlyfnjDsAAAAi/pepe-skill-issue.gif",
+        "https://media.tenor.com/-G603KA91pcAAAAi/pepe-red-pill.gif",
+        "https://media.tenor.com/4Vynzdcm7NcAAAAi/malding-pepe.gif",
+        "https://media.tenor.com/TdrQywX2yMAAAAAi/frog.gif",
+        "https://media.tenor.com/mT1fGtxy9U8AAAAi/pepe-the-frog.gif",
+        "https://media.tenor.com/yrKa2aKFPdcAAAAi/pepe-nerd.gif",
+        "https://media.tenor.com/2z8MiLXXHDYAAAAi/yeppers-yep.gif",
+        "https://media.tenor.com/WJ8CoTrg-XAAAAAi/pepe-ride.gif",
+        "https://media.tenor.com/h5ygN1BrYykAAAAi/madge-late.gif",
+        "https://media.tenor.com/4uy-pQcqF04AAAAi/saved.gif",
+        "https://media.tenor.com/UftzRXjXOpcAAAAi/peaceout-vanish.gif",
+        "https://media.tenor.com/VeIrAH4s5u0AAAAi/peepoblushspinner-pepe.gif",
+        "https://media.tenor.com/J1QjkX0SYG8AAAAi/blankies-peepo.gif"
     ];
 
     const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
